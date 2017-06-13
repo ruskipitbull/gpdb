@@ -125,7 +125,11 @@ typedef struct
 static int extssl_protocol  = CURL_SSLVERSION_TLSv1;
 const char* extssl_cipher = "AES128-SHA";
 static int extssl_verifycert = 1;
-static int extssl_verifyhost = 2;
+/*
+ *  explicitly turning off host verification
+ *
+ */
+static int extssl_verifyhost = 0;
 const char* extssl_cert = "gpfdists/client.crt";
 const char* extssl_key = "gpfdists/client.key";
 const char* extssl_ca = "gpfdists/root.crt";
